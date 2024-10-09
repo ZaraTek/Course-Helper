@@ -1,14 +1,161 @@
 body {
-    background-color: lightblue;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
-  
+  margin: 0;
+}
+
+.home {
+  background-color: #a5e8ff;
+}
+
+
+.about {
+  background-image: url('seasons.jpg');
+  background-color: #586b3e;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutContent {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+
+.homeContent {
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.characters {
+  background-color: #a5e8ff;
+  text-align: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+th,
+td {
+  border: 1.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 15px;
+}
+
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: #3bd257;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #077021;
+  color: rgb(249, 249, 249);
+}
+
+.team {
+  border-style: dashed;
+  padding: 25px;
+  margin: 25px;
+  width: max-content;
+  display: inline-block;
+}
+
+#s1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#s2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#s3 {
+  font-family: fantasy;
+}
+
+#s4 {
+  font-family: cursive;
+}
+
+#s5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr:nth-child(even) {
+  background: #dbc2e4
+}
+
+tr:nth-child(odd) {
+  background: #c2e4d4
+}
+
+.charList {
+  column-count: 3;
+  column-gap: 40px;
+  column-span: all;
+  text-align: left;
+}
+
+#main {
+  font-size: 18px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  border: 3px #000000;
+  border-style: double;
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+}
+
+#img {
+  width: 160px;
+  height: 160px;
+}
+
+div>img {
+  width: auto;
+  height: 80%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+div>h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
