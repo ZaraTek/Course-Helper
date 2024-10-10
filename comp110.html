@@ -108,6 +108,16 @@
                 section.style.display = 'none';
             });
         }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                alert(`File uploaded: ${file.name}`);
+                // to be processed
+            } else {
+                alert('No file selected');
+            }
+        }
     </script>
 </head>
 
@@ -178,10 +188,12 @@
         </ul>
     </div>
 
+    <!-- Upload Section -->
     <div id="uploadContent" class="content-section">
         <button class="back-button" onclick="goBack()">Back</button>
-        <h2>Upload Content</h2>
-        <p>Select a type of resourse to upload:</p>
+        <h2>Upload Resources</h2>
+        <p>Select a file to upload:</p>
+        <input type="file" accept=".pdf,.doc,.docx,.ppt,.pptx" onchange="handleFileUpload(event)">
     </div>
 </body>
 
