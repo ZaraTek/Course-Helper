@@ -3,9 +3,8 @@ body {
 }
 
 .home {
-  background-color: #a5e8ff;
+  background-color: #7BAFD4;
 }
-
 
 .about {
   background-image: url('seasons.jpg');
@@ -20,6 +19,27 @@ body {
   padding-bottom: 50px;
 }
 
+.logoandtext {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.quotes {
+  margin-right: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(252, 251, 251, 0.8);
+  font-size: 20px;
+
+}
+
+#homeImg {
+  width: 500px;
+  height: auto;
+  /* Maintain aspect ratio */
+}
 
 .homeContent {
   padding: 20px;
@@ -27,7 +47,8 @@ body {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Lucida Console';
+  color: #13294B;
 }
 
 .characters {
@@ -36,7 +57,6 @@ body {
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
 }
-
 
 table {
   width: 70%;
@@ -59,13 +79,13 @@ td {
 .topnav {
   width: 100%;
   overflow: hidden;
-  background-color: #3bd257;
+  background-color: #13294B;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #000000;
+  color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -86,9 +106,25 @@ td {
 .team {
   border-style: dashed;
   padding: 25px;
-  margin: 25px;
-  width: max-content;
-  display: inline-block;
+  margin: 25px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side,
+.right-side {
+  width: 45%;
+  /* Adjust width for left and right sides */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+select {
+  margin-top: 10px;
+  width: 100%;
 }
 
 #s1 {
@@ -112,11 +148,11 @@ td {
 }
 
 tr:nth-child(even) {
-  background: #dbc2e4
+  background: #dbc2e4;
 }
 
 tr:nth-child(odd) {
-  background: #c2e4d4
+  background: #c2e4d4;
 }
 
 .charList {
@@ -127,7 +163,7 @@ tr:nth-child(odd) {
 }
 
 #main {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .grid-container {
@@ -158,4 +194,9 @@ div>img {
 
 div>h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.quotes {
+  text-align: left;
+  /* Change text alignment to left for quotes */
 }
