@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        :root {
+            --button-size: 200px;
+            --border-radius: 30px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .button-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .quizlet-button, .docs-button, .misc-resources, .upload-button {
+            width: var(--button-size);  
+            height: var(--button-size);
+            background-color: #ffffff;  
+            background-size: var(--button-size) var(--button-size);
+            color: white; 
+            border: none;
+            border-radius: var(--border-radius); 
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .quizlet-button {
+            background-image: url('quizlet.png');
+        }
+
+        .docs-button {
+            background-image: url('docs.png');
+        }
+
+        .misc-resources {
+            background-image: url('external_resources.png');
+        }
+
+        .upload-button {
+            background-image: url('upload.png');
+        }
+
+        .content-section {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #a5e8ff;
+            padding: 20px;
+            overflow-y: auto;
+            font-size: 20px;
+        }
+
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+
+    <script>
+        function showContent(contentId) {
+            document.querySelector('.charactersContent').style.display = 'none';
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        function goBack() {
+            document.querySelector('.charactersContent').style.display = 'block';
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+    </script>
+</head>
+
+<body class="characters">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Seasons</a>
+        <a href="characters.html">Characters</a>
+    </div>
+
+    <!-- Button section -->
+    <div class="charactersContent">
+        <h3>COMP 110</h3>
+        <h2>Resources</h2>
+
+        <div class="button-container">
+            <div class="button-label">Quizlet</div>
+            <button class="quizlet-button" onclick="showContent('quizletContent')"></button>
+        </div>
+
+        <div class="button-container">
+            <div class="button-label">Docs</div>
+            <button class="docs-button" onclick="showContent('docsContent')"></button>
+        </div>
+
+        <div class="button-container">
+            <div class="button-label">External Resources</div>
+            <button class="misc-resources" onclick="showContent('miscResourcesContent')"></button>
+        </div>
+
+        <div class="button-container">
+            <div class="button-label">Upload Resources</div>
+            <button class="upload-button" onclick="showContent('uploadContent')"></button>
+        </div>
+    </div>
+
+    <!-- Content sections -->
+    <div id="quizletContent" class="content-section">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h2>Quizlet Resources</h2>
+        <p>Here are some Quizlet study sets for COMP 110:</p>
+        <ul>
+            <li><a href="https://quizlet.com/717004109/comp-110-quiz-0-flash-cards/">COMP 110 Quiz 0 Flashcards</a></li>
+            <li><a href="https://quizlet.com/in/617051864/comp-110-quiz-01-flash-cards/">COMP 110 Quiz 01 Flashcards</a></li>
+            <li><a href="https://quizlet.com/175450611/comp-110-final-unc-flash-cards/">COMP 110 final UNC Flashcards</a></li>
+        </ul>
+    </div>
+
+    <div id="docsContent" class="content-section">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h2>Docs Resources</h2>
+        <p>Here are some Docs and tutorials for COMP 110:</p>
+        <ul>
+            <li>Official Documentation</li>
+            <li>JavaScript Tutorials</li>
+            <li>HTML & CSS Guides</li>
+        </ul>
+    </div>
+
+    <div id="miscResourcesContent" class="content-section">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h2>Miscellaneous Resources</h2>
+        <p>External resources for COMP 110:</p>
+        <ul>
+            <li>Stack Overflow</li>
+            <li>MDN Web Docs</li>
+            <li>FreeCodeCamp</li>
+        </ul>
+    </div>
+
+    <div id="uploadContent" class="content-section">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <h2>Upload Content</h2>
+        <p>Select a type of resourse to upload:</p>
+    </div>
+</body>
+
+</html>
