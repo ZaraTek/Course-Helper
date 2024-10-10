@@ -1,40 +1,58 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Battle for Dream Island</title>
+    <title>Course Helper</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="home">
     <div class="topnav">
         <a href="index.html">Home</a>
-        <a href="about.html">Seasons</a>
-        <a href="characters.html">Characters</a>
+        <a href="ratings.html">Ratings</a>
+        <a href="comp110.html">Catalog</a>
     </div>
 
     <div class="homeContent">
-        <img src="home.jpg" alt="home content">
-        <p id="main"><strong>Battle for Dream Island (BFDI)</strong> is an animated web series set in a fictional world
-            where
-            inanimate objects are personified and compete in various challenges to win a grand prize: <strong><em>Dream
-                    Island</strong></em>.
-
-            The show follows a reality TV-style competition format, where the characters (who are objects like a tennis
-            ball, leaf, pencil, etc.) form alliances, face eliminations, and tackle various challenges. Contestants are
-            eliminated based on votes from real-life viewers.
+        <div class="logoandtext">
+            <img id="homeImg" src="course-helper-logo.webp" alt="home content">
+            <div class="quotes" style="text-align: center;">
+                <h2>Keep falling asleep to recorded lectures?</h2>
+                <h2>Played NYT crosswords instead of paying attention?</h2>
+                <h2>Don't have reliable friends?</h2>
+                <h1><em>HAVE A MIDTERM TOMORROW?!</em></h1>
+            </div>
+        </div>
+        <p id="main">
+            <strong>Welcome to Study Share!</strong> a collaborative platform for students to access a vast collection of study materials for any class taken at Carolina. Our mission is to create an academic community where knowledge is passed down, enabling students to enhance their study habits, deepen their understanding, and excel in their educational journeys. <strong><em>StudyShare is for students, by students.</strong></em>
+            You also have the chance to rate lectures from professors and leave feedback, allowing future students to spend their time wisely and optimize their time and learning.
         </p>
         <div class="team">
-            <h3> Choose your team!</h3>
-            <select name="character">
-                <option value="default">Choose</option>
-                <option value="squashygrape">Squashy Grapes</option>
-                <option value="squashycherries">Squashy Cherries</option>
-                <option value="anothername">Another name</option>
-                <option value="beautiful">The Beautiful Face Devotion Institute</option>
-            </select>
+            <div class="left-side">
+                <h3> Search For A Class </h3>
+                <input type="text" placeholder="Search.." style="width: 50%; margin-top: 10px;">
+            </div>
+            <div class="right-side">
+                <h3> Choose A Class </h3>
+                <select id="classSelect" style="width: 50%; margin-top: 10px;">
+                    <option value="default">Choose</option>
+                    <option value="comp110.html">COMP 110</option>
+                    <option value="squashycherries">COMP 210</option>
+                    <option value="anothername">PHYS 8678</option>
+                    <option value="beautiful">CALC 5000</option>
+                </select>
+            </div>
+
+            <script>
+                document.getElementById("classSelect").addEventListener("change", function() {
+                    var selectedValue = this.value;
+                    if (selectedValue !== "default") { // Avoid redirection for the default option
+                        window.location.href = selectedValue; // Redirect to the selected page
+                    }
+                });
+            </script>
+            
         </div>
     </div>
 </body>
